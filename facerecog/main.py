@@ -429,6 +429,7 @@ def sendListPeople():
                     sheet_new['B' + str(l)] = i
                     l += 1
                 book_new.save(folder + xl)
+                sendListPeople()
             else:
                 print("not Found")
                 print(people)
@@ -526,8 +527,6 @@ def doorSystem():
             break
     cam.release()
 
-
-aaaaaa = listPeopple()
 
 bot = telepot.Bot('5416163618:AAHBBGGW22gxlbFixf06qlqVCIPqnDUKqtU')
 bot.sendMessage(id_message, first_message)
